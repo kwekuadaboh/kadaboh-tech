@@ -1,0 +1,79 @@
+.p-nav {
+  &--list {
+    position: relative;
+    display: inline-block;
+    margin-bottom: 1.5rem;
+    @include tab-land {
+      margin-bottom: 2rem;
+    }
+  }
+
+  &__item {
+    display: inline-block;
+    position: relative;
+    @include phone-land {
+      letter-spacing: 2px;
+    }
+    &:not(:last-child) {
+      margin-right: 1.4rem;
+
+      @include tab-land {
+        margin-right: 3.5rem;
+      }
+    }
+
+    &.p-nav__item--home {
+      display: block;
+      width: max-content;
+
+      @include phablet {
+        display: inline-block;
+      }
+    }
+  }
+
+  &__link {
+    transition: all 250ms;
+    border-radius: 3px;
+    // @extend %link;
+
+    &::after {
+      content: "";
+      position: absolute;
+      display: block;
+      width: 80%;
+      height: 2px;
+      bottom: 3px;
+      left: 0rem;
+      background-color: $clr-anthensGray;
+
+      transform: scaleX(0);
+      transition: all 250ms ease-out;
+      transform-origin: left;
+    }
+
+    &:hover::after {
+      transform: scaleX(1);
+    }
+
+    &:focus {
+      transform: translateX(2px);
+      padding: -1rem;
+    }
+    @extend %link;
+    width: 100% !important;
+    left: 0 !important;
+
+    &.active-link {
+      // color: $clr-sanJuan;
+    }
+
+    &.active-link::after {
+      // transform: scaleX(1);
+    }
+  }
+}
+
+// .p-nav--list li:not(:first-of-type) {
+//   border: 1px solid red;
+// }

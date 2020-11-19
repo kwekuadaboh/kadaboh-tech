@@ -1,0 +1,58 @@
+.about {
+}
+
+.read-p {
+  margin-bottom: 1rem;
+  font-size: 2rem;
+  font-weight: 700;
+
+  @include tab-land {
+    margin-bottom: 2rem;
+  }
+}
+
+.books {
+  &__list {
+    position: relative;
+    // margin: 40px 0;
+
+    &::before {
+      content: "";
+      position: absolute;
+      top: 100%;
+      left: 0;
+      width: 100%;
+      height: 15px;
+      background-color: whitesmoke;
+    }
+    &::after {
+      content: "100%";
+      position: absolute;
+      top: 100%;
+      left: 0;
+      width: 100%;
+      height: 15px;
+      background-color: $clr-seagull;
+      line-height: 1;
+      text-align: right;
+      border-radius: 3px;
+    }
+
+    &.book5::after {
+      content: "50%";
+      width: 50%;
+    }
+    &.book7::after {
+      content: "30%";
+      width: 30%;
+    }
+  }
+
+  &__list:not(:first-of-type) {
+    margin: 2.5rem 0;
+
+    @include tab-land {
+      margin: 3rem 0;
+    }
+  }
+}

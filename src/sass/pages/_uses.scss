@@ -1,0 +1,51 @@
+.uses {
+  &__text {
+    margin-bottom: 1rem;
+    @include tab-land {
+      margin-bottom: 1.5rem;
+    }
+  }
+
+  &__link {
+    color: #1b70de;
+    transition: all 250ms;
+    display: inline-block;
+
+    &:hover {
+      color: lighten(#1b70de, 10%);
+      transform: translateY(-0.1rem);
+    }
+  }
+
+  &__item {
+    position: relative;
+    padding-left: 1.8rem;
+
+    @include tab-land {
+      padding-left: 2rem;
+    }
+
+    &::before {
+      content: "";
+      position: absolute;
+      width: 10px;
+      height: 10px;
+      display: block;
+      border-radius: 50%;
+      background-color: #fff;
+      border: 2px solid $clr-sirocco;
+      left: 0;
+      top: 9px;
+
+      @include tab-land {
+        width: 12px;
+        height: 12px;
+        top: 7px;
+      }
+    }
+  }
+}
+
+/* 
+<a href="#!" class="uses__link" target="_blank"></a> 
+*/

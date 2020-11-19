@@ -1,0 +1,30 @@
+.form {
+  &__control {
+    display: block;
+
+    &:focus {
+      background-color: #fff;
+      border-color: $clr-seagull;
+      box-shadow: 0 0 0 2px rgba($clr-seagull, 0.3);
+    }
+
+    &::placeholder {
+      opacity: 0.4;
+    }
+  }
+
+  &__required::after {
+    content: "*";
+    display: inline-block;
+    color: #f33;
+    margin-left: 1rem;
+    position: relative;
+    top: 4px;
+  }
+
+  textarea {
+    min-height: 20rem;
+    overflow: auto;
+    resize: vertical;
+  }
+}
