@@ -25,6 +25,16 @@ a {
   -webkit-tap-highlight-color: transparent;
 }
 
+.main {
+  padding: 0 2rem;
+  display: flex;
+  flex-direction: column;
+  height: calc(100vh - 58px);
+  background: #fff;
+
+  // border: 2px dashed red;
+}
+
 h1,
 h2,
 h3,
@@ -56,13 +66,7 @@ img {
   display: block;
 }
 
-.main {
-  padding: 0 2rem;
-  display: flex;
-  flex-direction: column;
-  height: calc(100vh - 78px);
-  background: #fff;
-}
+
 
 .wrap {
   margin-top: 2rem;

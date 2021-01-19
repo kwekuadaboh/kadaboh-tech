@@ -13,3 +13,5 @@ dist/images/icomoon/
 dist/images/Testsprites.svg
 
 zmiscellanous.txt
+dist/
+.vscode

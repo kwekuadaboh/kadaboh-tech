@@ -1,18 +1,17 @@
 .intro {
   &__content {
     margin-top: 4rem;
-    // padding: 0 2rem;
+    text-align: center;
 
     @include phablet {
       margin-top: 10rem;
-      // text-align: center;
+      text-align: center;
     }
   }
   &__heading {
-    letter-spacing: 2px;
-
     & span {
       border-radius: 3px;
+      background-color: $clr-lightgray1;
       padding: 0 4px;
     }
 
@@ -22,8 +21,6 @@
   }
 
   &__description {
-    letter-spacing: 1px;
-    font-weight: 400;
     font-size: 3rem;
 
     @include tab-land {
@@ -33,9 +30,9 @@
 
   &__certs {
     margin-bottom: auto;
+ 
 
     &--title {
-      letter-spacing: 2px;
       background-color: $clr-lightgray1;
       width: max-content;
       padding: 0 1rem;
@@ -71,22 +68,23 @@
       display: flex;
       align-items: center;
       justify-content: space-between;
-      margin: 2rem auto;
-
+      margin: 2rem auto; //*fixes centering bcos of max-width
+   
       @include phablet {
         max-width: 550px;
       }
     }
 
-    & .container {
-      padding: 0;
-    }
-
+  
     & .date {
       background-color: $clr-lightgray1;
       padding: 0.5rem;
       border-radius: 3px;
     }
+  }
+
+  &__social {
+    // border: 1px dotted blue;
   }
 
   &__hello {

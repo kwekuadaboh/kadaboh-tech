@@ -10,31 +10,15 @@
 }
 .main-nav {
   &__list {
-    list-style: none;
+    list-style: none; 
     display: flex;
     justify-content: space-around;
-    margin-bottom: 0;
+    margin-bottom: 0; //*overwrites in skeleton
   }
 
-  &__link {
-    padding: 1rem 0.5rem;
-    border-radius: 3px;
-
-    @include phablet {
-      padding: 1rem;
-    }
-    @extend %link;
-
-    &:focus,
-    &:active {
-      transform: translateX(5px);
-      padding: 1rem 0.5rem;
-    }
-  }
-
-  &__item {
+   &__item {
     position: relative;
-    margin: 0;
+    margin: 0;  //*overwrites skeleton
 
     &:not(:first-of-type) {
       @include tab-land {
@@ -44,13 +28,33 @@
       }
     }
   }
-  & .d-none-sm {
+ 
+ & .d-none-sm { //* hides and reveals KAdaboh(back home btn
     display: none;
     @include phablet {
-      display: inline-block;
+      display: block;
       margin-right: auto;
     }
   }
+
+   &__link {
+    padding: .5rem 0.5rem;
+    border-radius: 3px;
+   
+    @extend %link;
+
+
+    @include phablet {
+      padding: 1rem;
+    }
+
+    &:focus,
+    &:active {
+      transform: translateX(5px);
+      padding: 1rem 0.5rem;
+    }
+  }
+
 }
 
 %link {
@@ -63,7 +67,7 @@
     width: 60%;
     height: 2px;
     bottom: 3px;
-    left: 1rem;
+    left: 1rem; //* cancells 1rem padding on link(a tag)
     background-color: $clr-anthensGray;
 
     transform: scaleX(0);
