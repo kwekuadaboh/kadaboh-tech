@@ -10,15 +10,15 @@
 }
 .main-nav {
   &__list {
-    list-style: none; 
+    list-style: none;
     display: flex;
     justify-content: space-around;
     margin-bottom: 0; //*overwrites in skeleton
   }
 
-   &__item {
+  &__item {
     position: relative;
-    margin: 0;  //*overwrites skeleton
+    margin: 0; //*overwrites skeleton
 
     &:not(:first-of-type) {
       @include tab-land {
@@ -28,8 +28,9 @@
       }
     }
   }
- 
- & .d-none-sm { //* hides and reveals KAdaboh(back home btn
+
+  & .d-none-sm {
+    //* hides and reveals KAdaboh(back home btn
     display: none;
     @include phablet {
       display: block;
@@ -37,12 +38,9 @@
     }
   }
 
-   &__link {
-    padding: .5rem 0.5rem;
-    border-radius: 3px;
-   
-    @extend %link;
-
+  &__link {
+    padding: 0.5rem 0.5rem;
+    @extend %link; //* apply sass placeholder styles
 
     @include phablet {
       padding: 1rem;
@@ -50,15 +48,14 @@
 
     &:focus,
     &:active {
-      transform: translateX(5px);
-      padding: 1rem 0.5rem;
+      padding: 1rem 0.5rem; //? animates to shrink in size left and right as paddign is changed from 1rem to .5rem l& r || might not be visible on mobile though
     }
   }
-
 }
-
+//@ SASS PLACHOLDER GLOBAL STYLES FOR LINKS HOVER
 %link {
-  transition: all 250ms;
+  border-radius: 3px;
+  transition: all 250ms; //? transition styles for active and focus state
 
   &::after {
     content: "";
