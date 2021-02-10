@@ -4,11 +4,10 @@
   background-size: 100% 1px;
   background-position: center top;
   padding-top: 1.4rem;
-  margin-top: 4rem;
+  margin-top: 1rem;
   font-size: 1.4rem;
-  margin-bottom: 1rem;
+  margin-bottom: 2rem;
   text-align: center;
-
  
 
   @include tab-land {
@@ -21,7 +20,7 @@
   & p {
     margin-bottom: 1rem;
     @include tab-land {
-      text-align: left;
+      // text-align: left;
     }
 
   }

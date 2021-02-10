@@ -31,29 +31,13 @@
     }
   }
 
-   &__link {
+
+  &__link {
     padding: 1rem 0.1rem;
     @extend %link;
-
 
     &::after {
       left: 0rem;
     }
-
-    &:focus {
-      // transform: translateX(2px);
-      // padding: .5rem 0;
-    }
-    
-
-    &.active-link {
-      // color: $clr-sanJuan;
-    }
-
-    &.active-link::after {
-      // transform: scaleX(1);
-    }
-  } 
+  }
 }
-
-
