@@ -10,8 +10,9 @@ src/images/icomoon/
 src/images/Testsprites.svg
 dist/images/favicon/
 dist/images/icomoon/
-dist/images/Testsprites.svg
+
 
 zmiscellanous.txt
 dist/
 .vscode
+/src/
