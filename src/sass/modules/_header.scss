@@ -54,7 +54,6 @@
 }
 //@ SASS PLACHOLDER GLOBAL STYLES FOR LINKS HOVER
 %link {
-  border: 1px solid red;
   border-radius: 3px;
   transition: all 250ms; //? transition styles for active and focus state
 
@@ -77,9 +76,14 @@
     transform: scaleX(1);
   }
 
+  &.current {
+    font-weight: bold;
+    color: $clr-seagull;
+  }
+
   &.current::after {
     width: 100%;
-    bottom: 1px;
+    bottom: 0px;
     transform: scaleX(1);
   }
 }
