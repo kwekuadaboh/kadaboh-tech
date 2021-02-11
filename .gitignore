@@ -1,7 +1,7 @@
 node_modules
 .package-lock.json
 .DS_Store
-webpack.dev.js
+# webpack.dev.js
 webpack.prod.js
 postcss.config.js
 fonts
@@ -10,9 +10,9 @@ src/images/icomoon/
 src/images/Testsprites.svg
 dist/images/favicon/
 dist/images/icomoon/
-
+/package-lock.json
 
 zmiscellanous.txt
-dist/
+
 .vscode
 /src/
