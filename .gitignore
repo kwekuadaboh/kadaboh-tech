@@ -4,10 +4,6 @@ node_modules
 # webpack.dev.js
 webpack.prod.js
 postcss.config.js
-fonts
-src/images/favicon/
-src/images/icomoon/
-src/images/Testsprites.svg
 dist/images/favicon/
 dist/images/icomoon/
 /package-lock.json
